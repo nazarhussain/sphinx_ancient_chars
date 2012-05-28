@@ -1,0 +1,25 @@
+== A sample Rails app
+
+This app will demonstrate sphinx characterset table feature. With this configuration you can search unicode letters for ancient variation with acute symbol on top of them with their preceding ASCII characters. 
+
+*Coté* can be search as *Cote*
+
+This will enable english keyboards to search for ancient letters as well.
+
+Also this will enable to map all upper case letters to lower case ones so you can do case-insensitive search as well.
+
+=== To start with it
+
+1. Close the repo
+2. Go to project folder
+3. Configure the `database.yml` file
+4. `rake db:create`
+5. `rake db:migrate`
+6. `rake ts:rebuild`
+7. `rails s`
+8. Create some dummy records with variation of acute symbol letters
+9. Then stop the server and run `rake ts:rebuild`
+10. Run the server again and feel the power of Sphinx.
+
+
+Thanks to James Heally(http://yob.id.au/about.html) for providing list of ancient character set.

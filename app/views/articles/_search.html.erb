@@ -1,0 +1,4 @@
+<%= form_for :search , url: articles_url, method: "GET" do |f| %>
+	<%= f.label "Search" %>
+	<%= f.text_field :query %>
+<% end %>
